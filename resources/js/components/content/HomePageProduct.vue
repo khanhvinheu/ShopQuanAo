@@ -36,12 +36,8 @@
                     </div>
                 </div>
             </div>
-        </VueSlickCarousel>
-        
+        </VueSlickCarousel>        
     </div>
-  
-   
-  
 </template>
 
 <script>
