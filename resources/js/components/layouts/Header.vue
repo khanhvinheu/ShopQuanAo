@@ -849,7 +849,7 @@
                             <div class="header-actions__inner">
                                 <div class="header-actions__menu">
                                     <div class="header-actions__inner">
-                                        <div data-v-5062b04f="" class="mini-cart">
+                                        <div data-v-5062b04f="" class="mini-cart mobile--hidden">
                                             <div data-v-5062b04f="" class="mini-cart__wrapper">
                                                 <div data-v-5062b04f="" class="mini-cart__header"><span data-v-5062b04f="">
                                                         2 sản phẩm

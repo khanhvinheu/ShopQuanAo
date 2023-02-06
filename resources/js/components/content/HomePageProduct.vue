@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <VueSlickCarousel :arrows="true" :dots="true" v-bind="setting">
-            <div v-for="item in 10" style="width: 100%; display: flex; justify-content: center;">
+    <div style="padding-left: 40px; padding-right: 40px">
+        <VueSlickCarousel v-bind="setting">
+            <div v-for="item in 10">
                 <div class="home__page-product">
                     <div class="product__item">
                     </div>
@@ -13,11 +13,18 @@
                     </div>
                     <div data-collection-tag="" class="product-grid__content">
                         <div class="product-grid__options">
-                            <div data-option-id="color" class="options-color">
-                                <div rel-script="option-color-change" data-value="xam-nhat"
-                                    data-images="[{&quot;id&quot;:&quot;06f10c28&quot;,&quot;src&quot;:&quot;\/image\/September2022\/jogger-casual-xam-nhat2_60.jpg&quot;},{&quot;id&quot;:&quot;a7200cb6&quot;,&quot;src&quot;:&quot;\/image\/October2022\/quan-ni-jogger-casual-xam.jpg&quot;},{&quot;id&quot;:&quot;39787160&quot;,&quot;src&quot;:&quot;\/image\/September2022\/jogger-casual-xam-nhat3_84.jpg&quot;},{&quot;id&quot;:&quot;b30007ed&quot;,&quot;src&quot;:&quot;\/image\/September2022\/jogger-casual-xam-nhat4_86.jpg&quot;},{&quot;id&quot;:&quot;d0de774a&quot;,&quot;src&quot;:&quot;\/image\/September2022\/jogger-casual-xam-nhat5_36.jpg&quot;},{&quot;id&quot;:&quot;6b0a3b59&quot;,&quot;src&quot;:&quot;\/image\/September2022\/jogger-casual-xam-nhat1_22.jpg&quot;},{&quot;id&quot;:&quot;0f8289b7&quot;,&quot;src&quot;:&quot;\/image\/October2022\/quan-jogger-casual-xam.jpg&quot;}]"
-                                    class="option-color__item"><span class="checkmark"
-                                        style="background-image: url(&quot;https://media.coolmate.me/cdn-cgi/image/width=160,height=160,quality=80,format=auto/uploads/October2022/quan-jogger-casual-xam.jpg&quot;);"></span>
+                            <div class="options-color">
+                                <div class="option-color__item">
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="option-color__item">
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="option-color__item">
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="option-color__item">
+                                    <span class="checkmark"></span>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +49,9 @@
 
 <script>
   import VueSlickCarousel from 'vue-slick-carousel'
-  // optional style for arrows & dots
+//   optional style for arrows & dots
+  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+//   optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
     components:{
@@ -51,45 +60,59 @@ export default {
     data(){
         return{
             setting:{
-  "dots": true,
-  "infinite": false,
-  "speed": 500,
-  "slidesToShow": 4,
-  "slidesToScroll": 4,
-  "initialSlide": 0,
-  "responsive": [
-    {
-      "breakpoint": 1024,
-      "settings": {
-        "slidesToShow": 3,
-        "slidesToScroll": 3,
-        "infinite": true,
-        "dots": true
-      }
-    },
-    {
-      "breakpoint": 600,
-      "settings": {
-        "slidesToShow": 2,
-        "slidesToScroll": 2,
-        "initialSlide": 2
-      }
-    },
-    {
-      "breakpoint": 480,
-      "settings": {
-        "slidesToShow": 1,
-        "slidesToScroll": 1
-      }
-    }
-  ]
-}
+                "dots": false,
+                "infinite": false,
+                "speed": 500,
+                "slidesToShow": 4,
+                "slidesToScroll":4,
+                "initialSlide":2,
+                "swipeToSlide": true,
+                "responsive": [
+                     {
+                    "breakpoint": 1600,
+                    "settings": {
+                        "slidesToShow": 3,
+                        "slidesToScroll": 3,
+                        "infinite": true,
+                        "dots": true
+                    }
+                    },
+                    {
+                    "breakpoint": 1024,
+                    "settings": {
+                        "slidesToShow": 2,
+                        "slidesToScroll": 2,
+                        "infinite": true,
+                        "dots": true
+                    }
+                    },
+                   
+                    {
+                    "breakpoint": 600,
+                    "settings": {
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1,
+                        "initialSlide":1
+                    }
+                    },
+                    {
+                    "breakpoint": 480,
+                    "settings": {
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1
+                    }
+                    }
+                ]
+            }
         }
     }
 }
 </script>
 
 <style>
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
 .home__page-product:hover .product-list__size  {
     visibility: visible;
     pointer-events: visible;
@@ -122,8 +145,8 @@ export default {
     margin-right: 5px;
 }
 .home__page-product{
-    height: 400px;
-    width: 250px;
+    height: 700px;
+    /* width: 250px; */
     position: relative;
     z-index: 1;
 }
@@ -158,5 +181,8 @@ export default {
     border-radius: 8px;
     margin-right: 5px;
 }
-
+.product-size__item:hover{
+    background-color: #000;
+    color: #fff;
+}
 </style>

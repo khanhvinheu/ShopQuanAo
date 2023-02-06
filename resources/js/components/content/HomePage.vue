@@ -33,7 +33,7 @@
                     </div>
                 </section>
                 <HomePageProduct/>
-                <!-- <div class="container container--full mgt--20">
+                <div class="container container--full mgt--20">
                     <div class="home-collection__banner"><a href="/cm24?itm_source=homepage-section">
                             <picture style="width: 100%;">
                                 <source media="(max-width:768px)"
@@ -42,8 +42,8 @@
                                     width="100%" style="">
                             </picture>
                         </a></div>
-                </div>            -->
-                <!-- <section class="homepage-excool">
+                </div>           
+                <section class="homepage-excool">
                     <div class="container">
                         <div class="about-card">
                             <div class="about-card__content">
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                </section> -->
+                </section>
             </main>
   </div>
 </template>

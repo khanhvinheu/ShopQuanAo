@@ -32,8 +32,8 @@ export default {
    data(){
         return {
             SlideData:[
+                {img:'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=90,format=auto/uploads/February2023/Banner_valentine.jpg'},
                 {img:'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=90,format=auto/uploads/November2022/Banner-Coolmate-Active-opt-1s.jpg'},
-                {img:'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=90,format=auto/uploads/October2022/Hero-BST-Dong-ppp_21.jpeg'},
             ]
         }
    }
