@@ -3,9 +3,19 @@ import HelloWorld from './components/content/HomePage'
 import ContentOne from './components/content/ContentOne'
 import ContentTwo from './components/content/ContentTwo'
 
-
-
 const routes = [,
+    {
+        path:'/backend',
+        component: () => import('./backend/index.vue'),
+        name: 'admin',
+        redirect: '/backend',
+        children: [
+            {
+                path: '/',
+                component: () => import('./backend/components/slider.vue'),
+            },
+        ]
+    },
     {
         path: '/',
         component: Index,

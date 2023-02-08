@@ -15,7 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('test', function(){
-    dd('--');
+    // $query = '
+    // SELECT categorys.*, PARENT."title" as "NameParent"
+    // FROM categorys
+    // LEFT JOIN categorys PARENT
+    // ON PARENT."id" = categorys."idParent"
+    // ';
+    // $data = DB::select($query);
+    // $result = array(
+    //     'status' => 'OK',
+    //     'message'=> 'Fetch Successfully',
+    //     'data'=> $data
+    // );
+    // return response()->json($result);
+    $data = DB::table('categorys')->get()->toArray();
+    dd($data);
 });
 
 
